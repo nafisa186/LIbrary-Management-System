@@ -1,0 +1,37 @@
+# Library Management System
+
+The Library Management System is a Java-based desktop application developed using Java Swing, MySQL, and JDBC. It helps manage library books, maintain member records, and handle book issuing and returning in a simple and organized way.
+
+## Technologies Used
+- Java 17
+- Java Swing for the user interface
+- JDBC for database connectivity
+- MySQL for data storage
+- Maven for project management
+
+## Features
+- Add, search, update, and delete book records.
+- Register new library members and view their details.
+- Issue books to members and record returned books.
+- Track the total and available copies of each book.
+- Store records permanently in a MySQL database.
+- Perform database operations in the background to keep the application responsive.
+
+## Requirements
+To run this project, you need Java JDK 17 or a newer version, Maven, MySQL Server, and Visual Studio Code with the Extension Pack for Java installed.
+
+## How to Run the Project
+1. Open MySQL Workbench and execute the `database/schema.sql` file to create the database and required tables.
+2. Set your MySQL username and password using the `DB_USER` and `DB_PASSWORD` environment variables.
+3. Open the project folder in VS Code and launch the terminal.
+4. Run `mvn clean compile` to compile the project and download the required dependencies.
+5. Run `mvn exec:java` to launch the application.
+
+## Project Structure
+The project is divided into separate packages to keep the code organized and easy to maintain. The `model` package contains the main data classes, `dao` handles database operations, `database` manages the JDBC connection, `service` contains the library's business logic, `ui` contains the graphical interface, and `exception` handles custom exceptions.
+
+## Database Design
+The system uses three main tables: `books`, `members`, and `book_issues`. These tables store book details, member information, and book issue and return records, respectively.
+
+## Future Enhancements
+In the future, the system can be improved by adding login and role-based access, automatic fine calculation for overdue books, member update and deletion options, automated testing, and a more attractive user interface.
